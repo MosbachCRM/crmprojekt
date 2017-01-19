@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="crmApp">
 <head>
 <meta charset="utf-8">
 <title>CRM Tool Frontend</title>
@@ -14,6 +14,9 @@
 <script src="app/app.js"></script>
 
 <!-- App Controller -->
+<script src="app/components/associates/associatesController.js"></script>
+<script src="app/components/calendar/calendarController.js"></script>
+<script src="app/components/profile/profileController.js"></script>
 
 </head>
 <body>
@@ -23,6 +26,8 @@
 		<li><a href="#/associates">Geschäftspartner</a></li>
 		<li><a href="#/profile">Profil</a></li>
 	</ul>
+	
+	<div ng-view></div>
 
 </body>
 </html>
