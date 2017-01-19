@@ -1,1 +1,21 @@
-<div>Gesch‰ftspartner</div>
+<div>Gesch√§ftspartner</div>
+
+		<table class="table table-hover" style="margin-top: 1rem">
+			<thead>
+				<tr>
+					<th class="table-big pointer hidden-xs-down">{{'LNAME' | translate}}
+					</th>
+					<th class="table-big pointer hidden-md-down">{{'FNAME' | translate}}
+					</th>
+					<th class="table-big pointer">{{'USERNAME' | translate}}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="associate in associates">
+					<td class="table-big hidden-xs-down">{{associate.lastName}}</td>
+					<td class="table-big hidden-md-down">{{associate.firstName}}</td>
+					<td class="table-mid">{{associate.userName}}</td>
+					</tr>
+			</tbody>
+		</table>

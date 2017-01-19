@@ -1,6 +1,6 @@
 var profileController = angular.module('profileController', []);
 
-userListControllers.controller('ProfileCtrl', [
+profileController.controller('ProfileCtrl', [
 	'$scope', '$route', '$http', '$location', function($scope, $route, $http, $location){
 		
 	} 
