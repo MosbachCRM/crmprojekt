@@ -41,13 +41,11 @@
         <h1 class="md-toolbar-tools">Username</h1>
       </md-toolbar>
       
-      <md-content layout-padding="" ng-controller="LeftCtrl">
-      
-          		<md-button ng-click="toggleLeft()"><a href="#/calendar">Kalender</a></md-button>
-				<md-button ng-click="toggleLeft()"><a href="#/associates">Geschäftspartner</a></md-button>
-				<md-button ng-click="toggleLeft()"><a href="#/profile">Profil</a></md-button>
-
-      </md-content>
+      <section layout="column" layout-align="center center">
+	  <md-button  class="group1 left" ng-click="toggleLeft()" href="#/calendar">Kalender</md-button>
+	  <md-button class="group1 middle" ng-click="toggleLeft()" href="#/associates">Geschäftspartner</md-button>
+	  <md-button class="group1 right" ng-click="toggleLeft()" href="#/profile">Profil</md-button>
+	  </section>
 
     </md-sidenav>
 
