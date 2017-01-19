@@ -1,5 +1,5 @@
 var crmAppModule = angular.module('crmApp', [
-	'ngRoute', 'ui.bootstrap', 'associatesController', 'calendarController', 'profileController'
+	'ngRoute', 'ngMaterial', 'ngMessages', 'sidebarController', 'associatesController', 'calendarController', 'profileController'
 ]);
 
 crmAppModule.config([
