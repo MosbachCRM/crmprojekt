@@ -48,7 +48,7 @@
 
 <div ng-controller="SidebarCtrl" layout="column" style="height:100%;" ng-cloak="" class="sidenavdemoBasicUsage">
 
-  <section layout="row" flex="">
+ <section layout="row" flex="">
 
     <md-sidenav ng-show="showSidebar" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
@@ -75,21 +75,18 @@
 
       <div layout="column" layout-align="top center">
         
-        	<div ng-view></div>
+        	<div ng-view flex=""></div>
 
         </div>
 
-      </div>
-
-      <div flex=""></div>
+      
 
     </md-content>
 
-  </section>
+</section>
 
 </div>
-
-				
+			
 
 </body>
 </html>
