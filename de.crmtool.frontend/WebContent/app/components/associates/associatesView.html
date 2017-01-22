@@ -1,21 +1,50 @@
 <div>Geschäftspartner</div>
 
+
+
 		<table class="table table-hover" style="margin-top: 1rem">
 			<thead>
 				<tr>
-					<th class="table-big pointer hidden-xs-down">{{'LNAME' | translate}}
+					<th class="table-big pointer hidden-xs-down">fuck
 					</th>
-					<th class="table-big pointer hidden-md-down">{{'FNAME' | translate}}
+					<th class="table-big pointer hidden-md-down">you
 					</th>
-					<th class="table-big pointer">{{'USERNAME' | translate}}
+					<th class="table-big pointer">bitch
 					</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="associate in associates">
-					<td class="table-big hidden-xs-down">{{associate.lastName}}</td>
-					<td class="table-big hidden-md-down">{{associate.firstName}}</td>
-					<td class="table-mid">{{associate.userName}}</td>
+					<td class="table-big hidden-xs-down">{{associate.uId}}</td>
+					<td class="table-big hidden-md-down">{{associate.uName}}</td>
+					<td class="table-mid">{{associate.uKlasse}}</td>
 					</tr>
 			</tbody>
 		</table>
+		
+<div ng-controller="AssociatesCtrl" layout-margin>
+  <mdt-table mdt-row="{
+                      data: nutritionList,
+                      'column-keys': [
+                          'name',
+                          'calories',
+                          'fat',
+                          'carbs',
+                          'protein',
+                          'sodium',
+                          'calcium',
+                          'iron'
+                      ]
+                      }">
+    <mdt-header-row>
+      <mdt-column align-rule="left">Dessert (100g serving)</mdt-column>
+      <mdt-column align-rule="right">Calories</mdt-column>
+      <mdt-column align-rule="right">Fat (g)</mdt-column>
+      <mdt-column align-rule="right">Carbs (g)</mdt-column>
+      <mdt-column align-rule="right">Protein (g)</mdt-column>
+      <mdt-column align-rule="right">Sodium (mg)</mdt-column>
+      <mdt-column align-rule="right">Calcium (%)</mdt-column>
+      <mdt-column align-rule="right">Iron (%)</mdt-column>
+    </mdt-header-row>
+  </mdt-table>
+</div>

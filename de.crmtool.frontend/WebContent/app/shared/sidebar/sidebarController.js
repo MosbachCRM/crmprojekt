@@ -1,7 +1,20 @@
 var sidebarController = angular.module('sidebarController', []);
 
-sidebarController.controller('SidebarCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.toggleLeft = buildDelayedToggler('left');
+sidebarController.controller('SidebarCtrl', [
+	'$scope', '$timeout', '$mdSidenav', '$log', '$location', function ($scope, $timeout, $mdSidenav, $log, $location) {
+    
+		$scope.toggleLeft = buildDelayedToggler('left');
+    
+    $scope.showSidebar = false;
+    $scope.$on('$routeChangeSuccess', function(){
+        // logic here to show/hide based upon $location.path()
+        var path = $location.path();
+        if (path === '/login'){
+            $scope.showSidebar = false;
+        } else {
+            $scope.showSidebar = true;
+        }
+    });
 
     /**
      * Supplies a function that will continue to operate until the
@@ -46,7 +59,7 @@ sidebarController.controller('SidebarCtrl', function ($scope, $timeout, $mdSiden
           });
       }
     }
-  })
+  }])
   .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
       // Component lookup should always be available since we are not using `ng-if`

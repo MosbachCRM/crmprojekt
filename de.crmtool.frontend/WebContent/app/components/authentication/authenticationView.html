@@ -1,0 +1,39 @@
+
+<md-content layout-padding="">
+<form name="authenticationForm" ng-submit="login()" role="form">
+<div layout="column" layout-align="center" class="authenticationErrors" layout-fill>
+	<div class="loginBox md-whiteframe-z1"  layout="column">
+	<md-toolbar>
+		<h2 class="md-toolbar-tools">
+			<span>Login</span>
+		</h2>
+	</md-toolbar>
+	<md-content class="md-padding" layout="column">
+	
+		<md-input-container class="md-block">
+			<label for="username">Benutzername</label>
+			<input type="text" required="" md-no-asterisk="" id="username" name="username" ng-model="username">
+			<div ng-messages="authenticationForm.username.$error">
+			<div ng-messages="required">Benutzername darf nicht leer sein</div>
+		</md-input-container>
+		
+		<md-input-container class="md-block">
+			<label for="password">Password</label>
+			<input type="password" required="" md-no-asterisk="" id="password" name="password" ng-model="password">
+			<div ng-messages="authenticationForm.password.$error">
+			<div ng-messages="required">Passwort darf nicht leer sein</div>
+		</md-input-container>
+		
+		<div layout="row" layout-align="center center" style="padding-top:20px" class="form-actions">
+			<md-button class="md-raised md-primary" type="submit" ng-disabled="form.$invalid || dataLoading">Login</md-button>
+			<div flex="">
+				<md-button href="", md-no-ink>Passwort vergessen</md-button>
+			</div>
+		</div>
+	</md-content>
+	</div>
+ </form>
+  <div ng-show="error" class="alert alert-danger">{{error}}</div>
+ </md-content>
+ 
+        
